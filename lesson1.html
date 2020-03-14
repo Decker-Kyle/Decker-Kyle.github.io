@@ -25,7 +25,7 @@ function exampleFactorial() {
 	total = 0;
 
 	while(num > 0){
-		total = total + num;
+		total = total.valueOf() + num.valueOf();
 		num = num - 1;
 	}
 	document.getElementById("total").innerHTML = total;
