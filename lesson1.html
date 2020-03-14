@@ -20,10 +20,11 @@
 </body>
 <script>
 function exampleFactorial() {
-	var num = document.getElementById("number").innerHTML;
-	var total = 0;
+	var num, value;
+	num = document.getElementById("number").value;
+	total = 0;
 
-	while(num >= 0){
+	while(num > 0){
 		total = total + num;
 		num = num - 1;
 	}
