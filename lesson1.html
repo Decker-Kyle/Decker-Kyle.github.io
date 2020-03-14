@@ -11,6 +11,9 @@
 		<button type="button" onclick="exampleFactorial()">Factorial</button>
 		<p id="total"></p>
 		<h3>Conditional Statements</h3>
+		<input id="helloCheck">Type "hello" please</input>
+		<button type="button" onclick="helloCheck()">Hi</button>
+		<p id="hello"></p>
 		<h3>Functions</h3>
 		<h3>Variables</h3>
 		<h3>Parameters</h3>
@@ -29,6 +32,16 @@ function exampleFactorial() {
 		number = number - 1;
 	}
 	document.getElementById("total").innerHTML = total;
+}
+function helloCheck() {
+	var text;
+	text = document.getElementById("helloCheck").value;
+	if (text == "hello") {
+		document.getElementById("hello").innerHTML = "Well, hello there."
+	}
+	else {
+		document.getElementById("hello").innerHTML = "...no hello? ok, fine."
+	}
 }
 </script>
 </html>
