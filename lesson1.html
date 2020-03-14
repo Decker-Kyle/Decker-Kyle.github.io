@@ -4,8 +4,30 @@
 	<title>CIT 261 - Kyle Decker</title>
 </head>
 <body>
-	<h1>Lesson 01: Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
+	<h2>Lesson 01: Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
 	<div>
+		<h3>Loops</h3>
+		<input id="number">
+		<button type="button" onclick="exampleFactorial">Add</button>
+		<p id="total"></p>
+		<h3>Conditional Statements</h3>
+		<h3>Functions</h3>
+		<h3>Variables</h3>
+		<h3>Parameters</h3>
+		<h3>Arrays</h3>
+		<h3>Associative Arrays</h3>
 	</div>
 </body>
+<script>
+function exampleFactorial() {
+	var num = document.getElementById("number").innerHTML;
+	var total = 0;
+
+	while(num >= 0){
+		total = total + num;
+		num = num - 1;
+	}
+	document.getElementById("total").innerHTML = total;
+}
+</script>
 </html>
