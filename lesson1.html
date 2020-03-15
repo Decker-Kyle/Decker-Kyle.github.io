@@ -6,19 +6,55 @@
 <body>
 	<h2>Lesson 01: Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
 	<div>
-		<h3>Loops</h3>
-		<input id="number">
-		<button type="button" onclick="exampleFactorial()">Factorial</button>
-		<p id="total"></p>
-		<h3>Conditional Statements</h3>
-		<input id="helloCheck">Type "hello" please</input>
-		<button type="button" onclick="helloCheck()">Hi</button>
-		<p id="hello"></p>
-		<h3>Functions</h3>
-		<h3>Variables</h3>
-		<h3>Parameters</h3>
-		<h3>Arrays</h3>
-		<h3>Associative Arrays</h3>
+		<div>
+			<h3>Loops</h3>
+			<p>A loop is a block of code that repeats itself until a given condition is fulfilled.
+			There are a few types of loops:
+			<ul>
+				<li>For Loops</li>
+				<li>While Loops</li>
+				<li>Do While Loops</li>
+			</ul>
+			In the below example we use a do while loop to calculate the factorial of a number.<br>
+			Please enter a number and press the button labeled Factorial.</p>
+			<input id="number">
+			<button type="button" onclick="exampleFactorial()">Factorial</button>
+			<p id="total"></p>
+		</div>
+		<div>
+			<h3>Conditional Statements</h3>
+			<p>Conditional statements are blocks of code that trigger certain actions based on a certain condition.<br>
+				This comes in the form of If statements...if something happens then something else is triggered.<br>
+			 	In the below example I ask you to type in the word "hello".<br>
+				If you type in the exact word you get a response button but
+		 		if you type in anything else you get a different response.</p>
+			<input id="helloCheck">
+			<button type="button" onclick="helloCheck()">Hi</button>
+			<p id="hello"></p>
+		</div>
+		<div>
+			<h3>Functions</h3>
+			<p>A function is a block of code that can be used by reference. The two examples above were called using functions.</p>
+		</div>
+		<div>
+			<h3>Variables</h3>
+			<p>Variables were also used in the previous examples. A variable is a stored value, whether that's a string of characters or a number.</p>
+		</div>
+		<div>
+			<h3>Parameters</h3>
+			<p>A parameter is a variable that's used in a function to determine which value to use.
+		</div>
+		<div>
+			<h3>Arrays</h3>
+			<p>Arrays are containers that hold multiple variables. Each variable is numbered and can be accessed according to that number.</p>
+			<input id="fmovie">
+			<button type="button" onclick="fMovies()">Add Movie</button>
+			<p id="movies"></p>
+		</div>
+		<div>
+			<h3>Associative Arrays</h3>
+			<p>Associative arrays are like normal arrays but instead of being numbered they have keys to each variable.</p>
+		</div>
 	</div>
 </body>
 <script>
@@ -27,21 +63,28 @@ function exampleFactorial() {
 	number = document.getElementById("number").value;
 	total = 1;
 
-	while(number > 0){
+	do{
 		total = Number(total) * Number(number);
 		number = number - 1;
-	}
+	}while(number > 0)
 	document.getElementById("total").innerHTML = total;
 }
+
 function helloCheck() {
 	var text;
 	text = document.getElementById("helloCheck").value;
 	if (text == "hello") {
-		document.getElementById("hello").innerHTML = "Well, hello there."
+		document.getElementById("hello").innerHTML = "Well, hello there.";
 	}
 	else {
-		document.getElementById("hello").innerHTML = "...no hello? ok, fine."
+		document.getElementById("hello").innerHTML = "...no hello? ok, fine.";
 	}
+}
+	var fMovie = new Array(5);
+	function fMovies() {
+		newMovie = document.getElementById("fmovie").value;
+		fMovie.push(newMovie);
+		document.getElementById("movies").innerHTML = fMovie.toString();
 }
 </script>
 </html>
